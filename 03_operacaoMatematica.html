@@ -16,10 +16,11 @@
     //PROCESSAMENTO
     let resultado;
     
+
     switch (operacao) {
         case "+":
         resultado = primeiro + segundo;
-        fraseResultado = `A soma dos números é ${resultado}`;
+        fraseResultado = `A soma dos números é ${resultado}.`;
             break;
         
         case "-":
@@ -30,11 +31,13 @@
         case "*":
         resultado = primeiro * segundo;
         fraseResultado = `A multiplicação dos números é ${resultado}.`;
+            break;
 
         case "/":
         resultado = (primeiro / segundo).toFixed(2);
         fraseResultado = `A divisão dos números é ${resultado}.`;
-
+            break;
+            
         default:
         alert(`Valor inválido!`);
             break;
@@ -58,7 +61,7 @@
     }
 
     //INTEIRO OU DECIMAL
-    if (NUmber.isInteger(resultado) == true) {
+    if (Number.isInteger(resultado) == true) {
         fraseIntDec = `O número é inteiro!`;
     } else {
         fraseIntDec = `O número é decimal!`;
@@ -66,6 +69,6 @@
 
     //SAÍDA
 
-    alert(fraseResultado + "Características do resultado:" + fraseParImpar + frasePosNeg + fraseIntDec);
+    document.write(fraseResultado +  "Características do resultado:"  + fraseParImpar + frasePosNeg + fraseIntDec);
 
 </script>
