@@ -10,7 +10,7 @@
 let hemisferio = prompt("Em qual hemisfério você está? (Norte ou Sul):");
 let mes = prompt("Qual o mês atual? (1-12):");
 
-// PROCESSAMENTO
+// PROCESSAMENTO / SAÍDA //
 let estacao;
 if (hemisferio === "Norte") {
   switch (mes) {
@@ -18,24 +18,28 @@ if (hemisferio === "Norte") {
     case "2":
     case "12":
     estacao = "Inverno";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     case "3":
     case "4":
     case "5":
-      estacao = "Primavera";
+    estacao = "Primavera";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     case "6":
     case "7":
     case "8":
-      estacao = "Verão";
+    estacao = "Verão";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     case "9":
     case "10":
     case "11":
-      estacao = "Outono";
+    estacao = "Outono";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     default:
-      estacao = "Mês inválido!";
+      alert("Mês inválido!");
   }
 
 } else if (hemisferio === "Sul") {
@@ -44,30 +48,32 @@ if (hemisferio === "Norte") {
     case "2":
     case "12":
     estacao = "Verão";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     case "3":
     case "4":
     case "5":
     estacao = "Outono";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     case "6":
     case "7":
     case "8":
     estacao = "Inverno";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     case "9":
     case "10":
     case "11":
     estacao = "Primavera";
+    alert(`A estação do ano correspondente é ${estacao}.`);
       break;
     default:
-    estacao = "Mês inválido!";
+    alert("Mês inválido!");
   }
 
 } else {
-  estacao = "Hemisfério inválido!";
+  alert("Hemisfério inválido!");
 }
 
-// SAÍDA
-alert(`A estação do ano correspondente é ${estacao}.`);
 </script>
